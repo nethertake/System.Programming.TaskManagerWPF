@@ -7,6 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <ListView x:Name="ListViewTaskManager">
+            <ListView.View>
+                <GridView x:Name="GridViewData">
+                    <GridView.Columns>
+                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Path= id}" ></GridViewColumn>
+                        <GridViewColumn Header="Name"  DisplayMemberBinding="{Binding Path= name}"></GridViewColumn>
+                        <GridViewColumn Header="Thread Count"  DisplayMemberBinding="{Binding Path= threadcount}"></GridViewColumn>
+                        <GridViewColumn Header="Memory Used"  DisplayMemberBinding="{Binding Path= memory}"></GridViewColumn>
+                        <GridViewColumn ></GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </Window>
